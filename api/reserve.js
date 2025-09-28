@@ -106,7 +106,7 @@ export default async function handler(req, res) {
         const d = await r.json();
         const apySeries = d?.apy || [];
         const last = apySeries[apySeries.length - 1];
-        if (last && typeof last.data === "number") jito_apy = last.data / 100; // 6.9% => 0.069
+        if (last && typeof last.data === "number") jito_apy = last.data; // 6.9% => 0.069
       }
     } catch (_) {}
 
